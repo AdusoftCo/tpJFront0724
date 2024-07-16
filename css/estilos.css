@@ -1,0 +1,42 @@
+.login {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    margin-top: 130px;
+}
+.login2 {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    margin-top: 90px;
+}
+.back-link {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    /* Adjust the left position as needed */
+    color: #333;
+    text-decoration: none;
+}
+.recuperar-link {
+    color: #adb5bd;
+    /* Light grey color */
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+.disabled-link {
+    
+    color: #adb5bd;
+    /* Light grey color */
+}
+.checkbox-wrapper {
+    text-align: left;
+    margin-left: 5px; /* Adjust the margin as needed */
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.R.U.D.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+    <script src="js/auth.js"></script>
+    <script>
+        isLogged();
+    </script>
+    <style>
+        .main-content {
+            max-width: 950px;
+            margin: auto;
+            padding: 0 5px;
+        }
+        .btn-custom {
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col">
+                    <a href="login.html" class="back-link"><i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="col text-end">
+                    <button id="btnLogout" class="btn btn-outline-dark btn-custom" onclick="logout()">Salir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4 mb-3">
+            <img src="imagenes/crud.jpg" alt="Logo" width="150" height="150" class="img-fluid d-block mx-auto">
+        </div>
+        
+        <div class="mb-3">
+            <input type="hidden" id="id">
+            
+            <label for="nombre">Nombre</label>
+            <input id="nombre" class="form-control mb-2">
+            
+            <label for="apellido">Apellido</label>
+            <input id="apellido" class="form-control mb-2">
+            
+            <label for="email">Email</label>
+            <input id="email" class="form-control mb-2">
+            
+            <label for="tipoCliente">Tipo Cliente</label>
+                <select id="tipoCliente" class="form-select mb-2">
+                    <option value="1">bronce</option>
+                    <option value="2">plata</option>
+                    <option value="3">oro</option>
+                </select>
+            
+            <button id="btnCrear" class="btn btn-outline-dark btn-custom mt-4" onclick="guardar()">Guardar</button>
+        </div>
+        
+        <hr>
+        
+        <!--<button class="btn btn-outline-dark btn-custom mb-3" onclick="llamarAPI()">Llamar API</button> -->
+        <h3 class="text-center mt-5 mb-3">Listado de Clientes</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>EMAIL</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>IMAGEN</th>
+                    <th>TIPO CLIENTE</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="datos">
+                
+            </tbody>
+        </table>    
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/crud.js"></script>
+</body>
+</html>

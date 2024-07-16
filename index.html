@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <style>
+        body {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 10px;
+        }
+        .navbar-nav .nav-link.btn {
+            border: 1px solid transparent;
+            background-color: transparent;
+        }
+        
+        .navbar-nav .nav-link.btn:hover {
+            border-color: #7c7d7e;
+            background-color: #e0e4e7;
+        }
+        .row .btn{
+            border: 1px solid transparent;
+            background-color: transparent;
+            color: black;
+        }
+        .row .btn:hover{
+            border-color: #7c7d7e;
+            background-color: #e0e4e7;
+        }
+        .input-group input[type="text"] {
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        .search-form {
+            margin-top: 100px;
+        }
+
+        .input-group .btn {
+            width: 7%;
+            border-color: transparent;
+            background-color: #e0e4e7;
+            color: #fff;
+            border-radius: 5px;
+            border-left: 1px solid #ccc;
+        }
+
+        .input-group .btn i {
+            font-size: 1rem;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .carousel-item img {
+            margin: 0 auto;
+        }
+
+        .carousel-item .card {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        main {
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Adus-Movies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" aria-current="page" href="#">Coming Soon</a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary me-2" href="registrar.html">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-primary" href="login.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Formulario de busqueda-->
+    <div class="row justify-content-center search-form">
+        <div class="col-9">
+            <form method="GET" action="#">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" name="query" placeholder="Buscar Peliculas, Series ...">
+                    <button class="btn" type="submit" style="color: #131314;"><i class="fas fa-search" style="color: white;"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <main class="mt-3">
+        <!-- Carousel Pelis Popu -->
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-4">Peliculas Populares</h2>
+            </div>
+            <!-- Carousel! -->
+            <div class="row justify-content-center carousel-row mt-4" id="popularMoviesCarousel">
+                 
+                <div class="col-12 p-0">
+                    <div class="carousel slide" data-bs-ride="carousel" id="popularMoviesCarouselInner">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                
+                            </div>
+                        </div>
+                        
+                        <a class="carousel-control-prev" href="#popularMoviesCarouselInner" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#popularMoviesCarouselInner" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending TV Shows Carousel -->
+        <div class="container mt-5">
+            <div class="row">
+                <h2 class="mt-4">Trending TV Shows</h2>
+            </div>
+            <!-- Carousel -->
+            <div class="row justify-content-center carousel-row mt-4" id="trendingTvCarousel">
+                               
+                <div class="col-12 p-0">
+                    <div class="carousel slide" data-bs-ride="carousel" id="trendingTvCarouselInner">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                
+                            </div>
+                        </div>
+                        
+                        <a class="carousel-control-prev" href="#trendingTvCarouselInner" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#trendingTvCarouselInner" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light py-3">
+        <div class="container">
+            <div class="row">
+                <!-- Cuatro links -->
+                <div class="col-12 text-center mb-3">
+                    <a href="#" class="btn btn-outline-primary me-5">Terminos y Condiciones</a>
+                    <a href="#" class="btn btn-outline-primary me-5">Preguntas frecuentes</a>
+                    <a href="#" class="btn btn-outline-primary me-5">Ayuda</a>
+                    <a href="login.html" class="btn btn-outline-primary">Administrador</a>
+                </div>
+                <!-- Footer texto -->
+                <div class="col-12 text-center">
+                    <p>Emakick's 2024 @ Todos los derechos reservados</p>
+                    <p>Diseñado por Adusoft <span style="color:#f70b0b; font-weight: bold;">❤</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    
+    <script>
+        const apiKey = '1852b4e18e9b6d255a7760ef419b49e4';
+        const popularMoviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+        const trendingTvUrl = `https://api.themoviedb.org/3/trending/tv/day?api_key=${apiKey}`;
+
+        // Fetch Pelis Populares
+        fetch(popularMoviesUrl)
+            .then(response => response.json())
+            .then(data => {
+                const carouselInner = document.querySelector('#popularMoviesCarouselInner .carousel-inner');
+                
+                carouselInner.innerHTML = '';
+                
+                populateCarousel(data.results, carouselInner);
+            })
+            .catch(error => console.error('Error fetching popular movies:', error));
+
+        // Fetch Trending TV Shows
+        fetch(trendingTvUrl)
+            .then(response => response.json())
+            .then(data => {
+                const carouselInner = document.querySelector('#trendingTvCarouselInner .carousel-inner');
+                
+                carouselInner.innerHTML = '';
+                
+                populateCarousel(data.results, carouselInner);
+            })
+            .catch(error => console.error('Error fetching trending TV shows:', error));
+
+        // Funcion carousel
+        function populateCarousel(results, carouselInner) {
+            
+            for (let i = 0; i < results.length; i += 3) {
+                const carouselItem = document.createElement('div');
+                carouselItem.classList.add('carousel-item');
+
+                const row = document.createElement('div');
+                row.classList.add('row');
+
+                for (let j = i; j < i + 3 && j < results.length; j++) {
+                    const item = results[j];
+                    const card = `
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" class="card-img-top" alt="${item.title || item.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.title || item.name}</h5>
+                                    
+                                </div>
+                            </div>
+                        </div>`;
+                    row.innerHTML += card;
+                    console.log(item);
+                }
+
+                carouselItem.appendChild(row);
+                carouselInner.appendChild(carouselItem);
+            }
+
+            carouselInner.firstChild.classList.add('active');
+        }
+
+    </script>
+
+</body>
+</html>
