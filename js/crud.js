@@ -1,7 +1,8 @@
-//listado de todos lo que vino del server
+// Listado de todos lo que vino del server
+
 let datos = [];
 
-//Edicion de Registro
+//Edicion de Registro seleccionado
 function editar(id) {
     const objetoAEditar =  datos.find(x => x.id === id);
     alert(JSON.stringify(objetoAEditar));
@@ -16,6 +17,7 @@ function editar(id) {
     document.getElementById('id').value = objetoAEditar.id;
 }
 
+// Limpio fields
 function limpiar() {
     document.getElementById('nombre').value = '';
     document.getElementById('apellido').value = '';
@@ -62,7 +64,7 @@ async function guardar() {
     listar();
 }
 
-//Listar Tabla
+//Listar la Tabla actualizada
 function listar() {
     const json = 
         fetch('http://localhost:8080/webapp/listarClientesController')
