@@ -49,7 +49,7 @@ function login() {
 // Salgo al Front
 function logout() {
     localStorage.removeItem('USUARIO');
-    window.location.href = 'file:///C:/java24100/tp1Java2024/login.html';
+    window.location.href = '/index.html';
 }
 
 // Busqueda de Usuario logueado
