@@ -18,18 +18,32 @@ function login() {
         },
         body: JSON.stringify(loginRequest)
     })
+
     .then(response => {
-        if(response.status !== 201) {
-            throw new Error('username / password invalid')
+        if (!response.ok) {
+            // Handle error response
+            return response.text().then(text => {
+                throw new Error(text || 'Username / Password Invalid');
+            });
         }
+        //return response.json();
     })
+
     .then(data => {
         //GUARDA EN LOCAL LA RESPUESTA
         localStorage.setItem('USUARIO', username);
     
         //REDIRECT A LA PAGINA
-        window.location.href = './crud.html'
-    });    
+        window.location.href = './crud.html';
+    })
+
+    .catch(error => {
+        console.error('Error:', error);
+        // Display error message
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = error.message;
+        errorMessage.style.display = 'block';
+    });
 }
 
 // Salgo al Front
