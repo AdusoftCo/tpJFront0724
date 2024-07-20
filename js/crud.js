@@ -1,4 +1,4 @@
-// Listado de todos lo que vino del server
+// Listado de todo lo que vino del server
 
 let datos = [];
 

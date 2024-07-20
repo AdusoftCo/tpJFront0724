@@ -40,27 +40,25 @@
             </div>
             
             <div class="mb-3">
-                <input type="date" name="date" id="date" class="form-control" required>
+                <input type="date" name="fec_nac" id="fec_nac" class="form-control" required>
             </div>
 
             <div class="mb-3">
                 <select name="pais" id="pais" class="form-control form-select">
                     <option value="0">Pais</option>
-                    <option value="">Pais</option>
+                    <option value="1">Argentina</option>
+                    <option value="2">U.S.A.</option>
+                    <option value="3">Peru</option>
                 </select>
             </div>
             
-            <div class="mb-3 checkbox-wrapper">
-                <input type="checkbox" name="terminos" id="terminos" required>
-                <label for="terminos">Acepto Terminos y condiciones</label>
-            </div>
-               
             <div class="mb-3 mt-5">
-                <button type="submit" class="btn btn-block" style="width: 40%; background-color: #5728b7; color: white; border-radius: 5px;">Entrar</button>
+                <button type="submit" onclick="guardar()" class="btn btn-block" style="width: 40%; background-color: #5728b7; color: white; border-radius: 5px;">Entrar</button>
             </div>
         </form>
         
     </div>
     
+    <script src="js/crud.js"></script>
 </body> 
 </html>
