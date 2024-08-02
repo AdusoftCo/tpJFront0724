@@ -11,7 +11,7 @@ function editar(id) {
     document.getElementById('nombre').value = objetoAEditar.nombre;
     document.getElementById('apellido').value = objetoAEditar.apellido;
     document.getElementById('email').value = objetoAEditar.email;
-    document.getElementById('tipoCliente').value = objetoAEditar.tipoClienteId;
+    document.getElementById('tipoCliente').value = objetoAEditar.tipoClienteId || '';
 
     //agregamos el id al campo hidden
     document.getElementById('id').value = objetoAEditar.id;
@@ -47,7 +47,7 @@ async function guardar() {
     };
 
     const json = JSON.stringify(jsonRequest);
-
+    console.log(json);
     const endpoint = id ? 'actualizarClientesController' : 'crearClientesController';
 
     //fetch POST al server para crear el recurso(cliente)
@@ -55,7 +55,7 @@ async function guardar() {
         method: 'POST',
         body: json,
         headers: new Headers({
-            'Content-Type': 'text/json'
+            'Content-Type': 'application/json'
         })
         }
     );

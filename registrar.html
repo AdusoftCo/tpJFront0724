@@ -18,7 +18,9 @@
             <img src="imagenes/crud.jpg" alt="Logo" width="100" height="100" class="img-fluid d-block mx-auto">
         </div>
 
-        <form action="#" method="post" class="mt-5">
+        <p id="success-message" class="mt-3" style="display:none; color: rgb(24, 184, 24);"></p>
+
+        <form id="registraForm" action="#" method="post" class="mt-5">
             <div class="mb-3">
                 <input type="text" name="nombre" id="nombre" class="form-control" 
                 placeholder="Nombre" required>
@@ -40,25 +42,27 @@
             </div>
             
             <div class="mb-3">
-                <input type="date" name="fec_nac" id="fec_nac" class="form-control" required>
+                <input type="date" name="fechaNac" id="fechaNac" class="form-control" required>
             </div>
 
             <div class="mb-3">
                 <select name="pais" id="pais" class="form-control form-select">
                     <option value="0">Pais</option>
-                    <option value="1">Argentina</option>
-                    <option value="2">U.S.A.</option>
-                    <option value="3">Peru</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="U.S.A.">U.S.A.</option>
+                    <option value="Peru">Peru</option>
                 </select>
             </div>
             
             <div class="mb-3 mt-5">
-                <button type="submit" onclick="guardar()" class="btn btn-block" style="width: 40%; background-color: #5728b7; color: white; border-radius: 5px;">Entrar</button>
+                <button id="registrarBtn" type="button" class="btn btn-block" style="width: 40%; background-color: #5728b7; color: white; border-radius: 5px;">Enviar</button>
             </div>
         </form>
         
+        <p id="error-message" class="mt-3" style="display:none; color: red;"></p>
+
     </div>
     
-    <script src="js/crud.js"></script>
+    <script src="js/registrar.js"></script>
 </body> 
 </html>
