@@ -23,7 +23,6 @@ function limpiar() {
     document.getElementById('apellido').value = '';
     document.getElementById('email').value = '';
     document.getElementById('tipoCliente').value = '';
-    document.getElementById('id').value = '';
 }
 
 //Guardar en Tabla
